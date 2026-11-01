@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161616">
+  <meta name="description" content="General Studies reading companion: concise notes, 4,000 explained questions and browser-saved bookmarks.">
+  <title>General Studies · Read & remember</title>
+  <link rel="icon" href="data:,">
+  <link rel="preload" href="assets/IBMPlexSansVar-Roman-v2.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=notes-emphasis-1">
+  <script src="study-data.js?v=notes-emphasis-1" defer></script>
+  <script src="note-format.js?v=notes-emphasis-1" defer></script>
+  <script src="app.js?v=notes-emphasis-1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to learning</a>
+  <header class="shell"><a href="index.html"><strong>PSC</strong> / General Studies</a><span>Your reading companion</span></header>
+  <section class="hero" aria-labelledby="page-title">
+    <div>
+      <p class="eyebrow"><span class="blue-square" aria-hidden="true"></span> LEARN AT YOUR OWN PACE</p>
+      <h1 id="page-title">Read. Recall.<br>Remember.</h1>
+      <p class="intro">Build your General Studies foundation, one fact at a time. Read the short notes, practise a subject, and pick up where you left off.</p>
+      <div class="hero-actions"><button class="button primary" data-action="read">Read the notes <span aria-hidden="true">↗</span></button><button class="button secondary" id="resume-global" hidden></button></div>
+    </div>
+    <div class="overview" aria-label="Your learning overview">
+      <div><span>Subjects</span><strong>06</strong></div>
+      <div><span>Questions</span><strong id="total-questions">4,000</strong></div>
+      <div><span>Notes read</span><strong id="total-notes-read">0</strong></div>
+      <p>No timer. No marks. Just learning.</p>
+    </div>
+  </section>
+  <div id="storage-warning" class="notice warning" role="status" hidden></div>
+  <nav class="tabs" aria-label="Learning tools">
+    <button data-view="notes" aria-current="page">Study notes</button>
+    <button data-view="practice">Practise questions</button>
+    <button data-view="bookmarks">Bookmarks <span id="bookmark-total">0</span></button>
+  </nav>
+  <div class="workspace" id="workspace">
+    <aside class="rail" aria-label="Subjects"><div class="rail-inner"><p class="eyebrow">YOUR SUBJECTS</p><div id="subject-list"></div><div class="rail-help"><strong>Make a little progress daily.</strong><p>Use “Flag for revision” for a difficult fact. Bookmarks keep a place you want to return to.</p><p id="saved-status">Progress saves in this browser.</p></div></div></aside>
+    <main id="main-content" tabindex="-1"><p class="loading">Loading your study library…</p></main>
+  </div>
+  <footer><p>Saved on this browser and address. Keep the folder together; learning works offline.</p><div><button class="link-button" id="export-progress">Download progress backup</button><label class="link-button import-label" for="import-progress">Restore backup<input type="file" id="import-progress" accept=".json,application/json"></label></div><p id="backup-message" role="status"></p></footer>
+  <div class="sr-only" id="announcer" role="status" aria-live="polite" aria-atomic="true"></div>
+  <noscript><p class="notice">Enable JavaScript to use the notes, questions and saved bookmarks.</p></noscript>
+</body>
+</html>
